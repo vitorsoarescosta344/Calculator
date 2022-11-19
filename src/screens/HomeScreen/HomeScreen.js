@@ -33,6 +33,21 @@ export default function HomeScreen() {
         setOperation('');
         setSecondValue('0');
         break;
+      case '-':
+        setFirstValue(parseFloat(firstValue) - parseFloat(secondValue));
+        setOperation('');
+        setSecondValue('0');
+        break;
+      case '*':
+        setFirstValue(parseFloat(firstValue) * parseFloat(secondValue));
+        setOperation('');
+        setSecondValue('0');
+        break;
+      case '/':
+        setFirstValue(parseFloat(firstValue) / parseFloat(secondValue));
+        setOperation('');
+        setSecondValue('0');
+        break;
 
       default:
         break;
