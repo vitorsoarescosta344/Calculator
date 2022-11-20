@@ -67,7 +67,7 @@ export default function HomeScreen() {
       <Container>
         <View
           style={{flex: 1, justifyContent: 'center', alignItems: 'flex-end'}}>
-          <Text style={{fontSize: 35}}>
+          <Text style={{fontSize: 40, fontWeight: '600'}}>
             {operation === '' ? firstValue : secondValue}
           </Text>
         </View>
