@@ -54,6 +54,14 @@ export default function HomeScreen() {
     }
   }
 
+  function setOperationHandler(op) {
+    if (operation !== '') {
+      resultHandler();
+    } else {
+      setOperation(op);
+    }
+  }
+
   return (
     <>
       <Container>
@@ -71,7 +79,7 @@ export default function HomeScreen() {
             size={1}
             icon={'division'}
             operator
-            onPress={() => setOperation('/')}
+            onPress={() => setOperationHandler('/')}
           />
           <Button size={1} text={'7'} onPress={text => onKeyboardPress(text)} />
           <Button size={1} text={'8'} onPress={text => onKeyboardPress(text)} />
@@ -80,7 +88,7 @@ export default function HomeScreen() {
             size={1}
             icon={'multiplication'}
             operator
-            onPress={() => setOperation('*')}
+            onPress={() => setOperationHandler('*')}
           />
           <Button size={1} text={'4'} onPress={text => onKeyboardPress(text)} />
           <Button size={1} text={'5'} onPress={text => onKeyboardPress(text)} />
@@ -89,7 +97,7 @@ export default function HomeScreen() {
             size={1}
             icon={'minus'}
             operator
-            onPress={() => setOperation('-')}
+            onPress={() => setOperationHandler('-')}
           />
 
           <Button size={1} text={'1'} onPress={text => onKeyboardPress(text)} />
@@ -99,7 +107,7 @@ export default function HomeScreen() {
             size={1}
             icon={'plus'}
             operator
-            onPress={() => setOperation('+')}
+            onPress={() => setOperationHandler('+')}
           />
           <Button size={2} text={'0'} onPress={text => onKeyboardPress(text)} />
           <Button size={1} text={'.'} onPress={text => onKeyboardPress(text)} />
